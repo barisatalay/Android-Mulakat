@@ -75,7 +75,7 @@ Bu kuralları kısa bir şekilde özetleyecek olursak,
 
 * singleTop: Bu mod tanımında ise, Intent çağrısı zaten oluşturulmuş bir Activity için çağırılırsa yeni bir Activity oluşturulmaz, onun yerine var olan Activity instance kullanılmaya devam edilir. Bu mod kullanımında onNewIntent ve onCreate metotlarında düzenlenmelidir.
 
-* singleTask: Bu mod tanımında çağrılan bir Activity' den sadece tek bir instance oluşturabilir. Sistem içerisinde zaten var olan bir Activity' e istek gönderilirse onNewIntent metodu kontrol edilmelidir.
+* singleTask: Bu mod tanımında çağrılan bir Activity' den sadece tek bir instance oluşturabilir. Sistem içerisinde zaten var olan bir Activity' e istek gönderilirse onNewIntent metodu kontrol edilmelidir. Eğer Stack’te ondan üstte activityler varsa onlar silinir.
 
 * singleInstance: singleTask moduna benzer bir kullanım söz konusudur. Ancak bu activity' i tutan task sadece tek bir singleInstance olarak tanımlanmış activity' i barındırabilir.
 
